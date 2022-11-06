@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SACourseworkGroupT.Shapes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -21,6 +22,15 @@ namespace SACourseworkGroupT
         public string HelloWorld()
         {
             return "Hello World";
+        }
+
+        [WebMethod]
+        public double GetPerimeter(string name, double x, double y, double z)
+        {
+            ShapeFactory sf = new ShapeFactory();
+            IShape shape;
+            shape = sf.CreateShape(name, x, y, z);
+            return sf.GetPerimeter(shape);
         }
     }
 }
