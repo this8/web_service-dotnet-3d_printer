@@ -7,7 +7,7 @@ namespace SACourseworkGroupT.Shapes
 {
     public class Circle : IShape
     {
-        protected string name = "Circle";
+        // protected string name = "Circle";
         protected double radius;
 
         public Circle(double radius)
@@ -15,12 +15,12 @@ namespace SACourseworkGroupT.Shapes
             this.radius = radius;
         }
 
-        public virtual string GetName()
-        {
-            return name;
-        }
+        // public virtual string GetName()
+        // {
+        //     return name;
+        // }
 
-        public virtual double GetPerimeter()
+        public double CalculatePerimeter()
         {
             return 2 * Math.PI * radius;
         }
