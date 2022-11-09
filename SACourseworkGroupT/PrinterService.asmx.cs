@@ -1,9 +1,9 @@
-﻿using SACourseworkGroupT.Shapes;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Services;
+using SACourseworkGroupT.Shapes;
 
 namespace SACourseworkGroupT
 {
@@ -17,20 +17,12 @@ namespace SACourseworkGroupT
     // [System.Web.Script.Services.ScriptService]
     public class PrinterService : System.Web.Services.WebService
     {
-
         [WebMethod]
-        public string HelloWorld()
+        public double CalculatePerimeter(string name, double x, double y, double z)
         {
-            return "Hello World";
-        }
-
-        [WebMethod]
-        public double GetPerimeter(string name, double x, double y, double z)
-        {
-            ShapeFactory sf = new ShapeFactory();
-            IShape shape;
-            shape = sf.CreateShape(name, x, y, z);
-            return sf.GetPerimeter(shape);
+            ShapeFactory shapeFactory = new ShapeFactory();
+            IShape shape = shapeFactory.CreateShape(name, x, y, z);
+            return shape.CalculatePerimeter();
         }
     }
 }
