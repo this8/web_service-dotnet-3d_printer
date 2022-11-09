@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace SACourseworkGroupT.Shapes
 {
-    internal interface IShape
+    public interface IShape
     {
-        string GetName();
-        double GetPerimeter();
+        // string GetName();
+        double CalculatePerimeter();
     }
 }
