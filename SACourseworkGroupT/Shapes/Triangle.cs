@@ -7,7 +7,7 @@ namespace SACourseworkGroupT.Shapes
 {
     public class Triangle : IShape
     {
-        protected string name = "Triangle";
+        // protected string name = "Triangle";
         protected double lengthOfSide1;
         protected double lengthOfSide2;
         protected double lengthOfSide3;
@@ -19,12 +19,12 @@ namespace SACourseworkGroupT.Shapes
             this.lengthOfSide3 = l3;
         }
 
-        public string GetName()
-        {
-            return name;
-        }
+        // public string GetName()
+        // {
+        //     return name;
+        // }
 
-        public double GetPerimeter()
+        public double ClaculatePerimeter()
         {
             return lengthOfSide1 + lengthOfSide2 + lengthOfSide3;
         }
