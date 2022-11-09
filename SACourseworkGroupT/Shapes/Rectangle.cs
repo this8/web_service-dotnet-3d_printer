@@ -7,7 +7,7 @@ namespace SACourseworkGroupT.Shapes
 {
     public class Rectangle : IShape
     {
-        protected string name = "Rectangle";
+        // protected string name = "Rectangle";
         protected double length;
         protected double width;
 
@@ -17,12 +17,12 @@ namespace SACourseworkGroupT.Shapes
             this.width = width;
         }
 
-        public virtual string GetName()
-        {
-            return name;
-        }
+        // public virtual string GetName()
+        // {
+        //     return name;
+        // }
 
-        public virtual double GetPerimeter()
+        public double CalculatePerimeter()
         {
             return (length + width) * 2;
         }
